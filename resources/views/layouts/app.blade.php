@@ -17,7 +17,7 @@ $roleid = User_role::find($role);
     <meta name="description" content="UD CIPTA INDAH">
     <meta name="keywords" content="UD, bangunan, cirebon">
     <meta name="author" content="Sunset Orange">
-    <title>{{ $title }}</title>
+    <title></title>
     <link rel="apple-touch-icon" href="{{ asset('/images/logo/logosmk.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/logo/logosmk.png') }}">
 
@@ -71,13 +71,8 @@ $roleid = User_role::find($role);
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
                         id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span
-                                class="user-name font-weight-bolder">{{ $user->name }}</span><span
-                                class="user-status">{{ $user->user_role->role }}</span></div><span
-                            class="avatar"><img class="round"
-                                src="{{ asset('/images/profile_user/' . $user->image) }}" alt="avatar" height="40"
-                                width="40"><span class="avatar-status-online"></span></span>
-                    </a>
+
+                             
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="/user"><i class="mr-50" data-feather="user"></i>
                             Profile</a>
@@ -115,25 +110,8 @@ $roleid = User_role::find($role);
 
                 <hr>
                 @php
-                    $menu = DB::select('SELECT m.* FROM user_access_menu u , user_menu m WHERE u.user_menu_id = m.id AND u.user_role_id = :role', ['role' => $user->user_role_id]);
-                    // dd($menu);
                 @endphp
 
-
-                @foreach ($menu as $m)
-
-                    {{-- menu 1 --}}
-                    @if ($title == $m->title)
-                        <li class="active nav-item">
-                        @else
-                        <li class=" nav-item">
-                    @endif
-
-                    <a class="d-flex align-items-center" href="{{ $m->url }}"><i
-                            data-feather="{{ $m->icon }}"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">{{ $m->title }}</span>
-                    </a>
-                @endforeach
 
             </ul>
         </div>

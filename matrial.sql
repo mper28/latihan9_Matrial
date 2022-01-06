@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Agu 2021 pada 12.39
--- Versi server: 10.4.17-MariaDB
--- Versi PHP: 7.4.15
+-- Waktu pembuatan: 05 Jan 2022 pada 13.39
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -343,7 +343,12 @@ INSERT INTO `users` (`id`, `nip`, `nis`, `name`, `image`, `email`, `email_orang_
 (3, NULL, NULL, 'Ayu', 'Capture.PNG', 'admin@gmail.com', NULL, '1', '0838371444', '$2y$10$/50MXxCKZpi1XjHqKWh3MOldLpj6wcRy4wFjJkXd85aVQyHk3pa7e', 'desa suci blok tenggeran mundu cirebon', NULL, 1, 1, NULL, NULL, 2, NULL, '2020-10-18 14:23:15', '2021-08-12 10:51:23'),
 (1602863100, NULL, NULL, 'Tomi', 'user.webp', 'sales@gmail.com', NULL, '1', '0838371444', '$2y$10$/50MXxCKZpi1XjHqKWh3MOldLpj6wcRy4wFjJkXd85aVQyHk3pa7e', 'desa suci blok tenggeran mundu cirebon', NULL, 2, 1, '1613648446', NULL, 2, NULL, '2020-10-08 14:23:15', '2021-08-10 20:29:55'),
 (1626748649, NULL, NULL, 'Deno', 'user.webp', 'sales2@gmail.com', NULL, '1', '0838371444', '$2y$10$/50MXxCKZpi1XjHqKWh3MOldLpj6wcRy4wFjJkXd85aVQyHk3pa7e', 'desa suci blok tenggeran mundu cirebon', NULL, 2, 1, '1613648446', NULL, 2, NULL, '2020-10-08 14:23:15', '2021-08-14 15:41:38'),
-(1626748651, NULL, NULL, 'Wahyu', 'user.webp', 'sales3@gmail.com', NULL, '1', '0838371444', '$2y$10$/50MXxCKZpi1XjHqKWh3MOldLpj6wcRy4wFjJkXd85aVQyHk3pa7e', 'desa suci blok tenggeran mundu cirebon', NULL, 2, 1, '1613648446', NULL, 2, NULL, '2020-10-08 14:23:15', '2021-08-14 15:41:38');
+(1626748651, NULL, NULL, 'Wahyu', 'user.webp', 'sales3@gmail.com', NULL, '1', '0838371444', '$2y$10$/50MXxCKZpi1XjHqKWh3MOldLpj6wcRy4wFjJkXd85aVQyHk3pa7e', 'desa suci blok tenggeran mundu cirebon', NULL, 2, 1, '1613648446', NULL, 2, NULL, '2020-10-08 14:23:15', '2021-08-14 15:41:38'),
+(1641084043, NULL, NULL, 'tatang', 'user.webp', 'nandysaputra07@gmail.com', NULL, '1641084043', NULL, '$2y$10$E6wu8Szo9IBQrgh9QjHNpebU4fAgGsYm5crAfYCf2iq7IT0YI6p.u', 'Belum Di Input', NULL, 2, 1, NULL, NULL, 2, NULL, '2022-01-02 00:40:44', '2022-01-02 00:40:44'),
+(1641094755, NULL, NULL, 'Nandi Saputra', 'user.webp', 'nasx07@gmail.com', NULL, '1641094755', NULL, '$2y$10$w7BfPjtlVz1vF84Lc2a5kOgmigR5J3gSXZ3zqZXzIjpoiCYHSBokO', 'Belum Di Input', NULL, 1, 1, NULL, NULL, 2, NULL, '2022-01-02 03:39:15', '2022-01-02 03:39:15'),
+(1641094975, NULL, NULL, 'Ucok', 'user.webp', 'nansx07@gmail.com', NULL, '1641094975', NULL, '$2y$10$8DvHSVodv5UxUEJ9Imld1.Vqgqo5NmXJT03h4/SpWjPSoXiOmXIOW', 'Belum Di Input', NULL, 1, 1, NULL, NULL, 2, NULL, '2022-01-02 03:42:55', '2022-01-05 05:14:21'),
+(1641359023, NULL, NULL, 'tatang', 'user.webp', 'enda@gmail.com', NULL, '1641359023', NULL, '$2y$10$hmYEvFfmjLIyFTRN3nCILuBMcDvlPZpPl0NvA/IHgVXVG6BETn1ay', 'Belum Di Input', NULL, 1, 1, NULL, NULL, 2, NULL, '2022-01-05 05:03:43', '2022-01-05 05:03:43'),
+(1641386309, NULL, NULL, 'NANDI SAPUTRA', 'user.webp', 'nandysyahputra59@gmail.com', NULL, '1641386309', NULL, '$2y$10$n96lkEMNo9mMNpLY7/No7OHQ2XUZOPA3C2oyc1X3RUGELfCt5xSKy', 'Belum Di Input', NULL, 1, 1, NULL, NULL, 2, NULL, '2022-01-05 12:38:29', '2022-01-05 12:38:29');
 
 -- --------------------------------------------------------
 
@@ -571,7 +576,7 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1626748652;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1641386310;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_menu`

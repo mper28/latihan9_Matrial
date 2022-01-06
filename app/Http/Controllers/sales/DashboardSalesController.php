@@ -4,6 +4,8 @@ namespace App\Http\Controllers\sales;
 
 use App\Http\Controllers\Controller;
 use App\Models\Data_komisi;
+use App\Models\Users;
+use App\Models\User_sales;
 use App\Models\Transaksi;
 use App\Models\User_menu;
 use Illuminate\Http\Request;
@@ -18,27 +20,11 @@ class DashboardSalesController extends Controller
      */
     public function index()
     {
-        $data['dari'] = date('Y-m-d');
-        $data['ke'] = date('Y-m-d');
-        $data['user'] = AUTH::user();
-        $data['title'] = 'Dashboard';
-        $data['menu'] = User_menu::all();
-        $data['transaksi'] = Transaksi::where('users_id', $data['user']->id)->whereBetween('tanggal', [$data['dari'], $data['ke']])->count();
-        $data['transaksii'] = Transaksi::where('users_id', $data['user']->id)->whereBetween('tanggal', [$data['dari'], $data['ke']])->get();
-        $data['komisi'] = Transaksi::addSelect(['komisi' => Data_komisi::selectRaw('sum(komisi) as totalkomisi')
-                ->whereColumn('data_komisi_id', 'Data_komisi.id')
-                ->whereBetween('tanggal', [$data['dari'], $data['ke']])
-                ->groupBy('data_komisi_id'),
-        ])
-            ->where('users_id', $data['user']->id)
-            ->orderBy('data_komisi_id', 'DESC')
-            ->get()
-            ->sum('komisi');
 
-        // dd($data['komisi']);
-        $data['komisis'] = Data_komisi::orderBy('id', 'desc')->get();
+        $lsstt = Users::all();
 
-        return view('sales.dashboard', $data);
+        return view('sales.dashboard')->with("listuser", $lsstt);
+        
 
     }
     public function komisi($dari, $ke)

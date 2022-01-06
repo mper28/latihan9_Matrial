@@ -21,6 +21,14 @@ class AuthController extends Controller
 
     public function index()
     {
+         $listuser = Users::all();
+
+         return view('listuser')->with("listuser", $listuser);
+
+
+    }
+
+    public function authh(){
 
         return view('auth');
     }
@@ -121,7 +129,6 @@ class AuthController extends Controller
         $request->session()->flash('status', 'Kamu berhasil keluar');
         return redirect('/login');
     }
-
     /**
      * Show the form for editing the specified resource.
      *
